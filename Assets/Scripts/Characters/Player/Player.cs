@@ -1,7 +1,4 @@
-﻿using System;
-using Genshin.Characters.Player.StateMachines.Movement;
-using Genshin.Characters.Player.StateMachines.Movement.States;
-using Genshin.Characters.Player.StateMachines.Movement.States.Grounded;
+﻿using Genshin.Characters.Player.StateMachines.Movement;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,13 +9,15 @@ namespace Genshin.Characters.Player
     {
         private PlayerMovementStateMachine movementStateMachine;
         public PlayerInput Input{get;private set;}
-        
+        public Rigidbody Rigidbody { get; private set; }
         private void Awake()
         {
             // 创建一个玩家移动状态机
-            movementStateMachine = new PlayerMovementStateMachine();
+            movementStateMachine = new PlayerMovementStateMachine(this);
             // 获取玩家自身输入器
             Input = GetComponent<PlayerInput>();
+            // 获取自身刚体
+            Rigidbody = GetComponent<Rigidbody>();
         }
 
         private void Start()

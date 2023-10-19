@@ -13,16 +13,18 @@ namespace Genshin.Characters.Player.StateMachines.Movement
         public PlayerRunningState RunningState { get; }
         // 获取玩家弹跳状态
         public PlayerSpringState SpringState { get; }
-
+        public Player Player { get;}
         /// <summary>
         /// 构造函数初始化
         /// </summary>
-        public PlayerMovementStateMachine()
+        /// <param name="player"></param>
+        public PlayerMovementStateMachine(Player player)
         {
-            IdlingState = new PlayeridlingState();
-            WalkingState = new PlayerWalkingState();
-            RunningState = new PlayerRunningState();
-            SpringState = new PlayerSpringState();
+            IdlingState = new PlayeridlingState(this);
+            WalkingState = new PlayerWalkingState(this);
+            RunningState = new PlayerRunningState(this);
+            SpringState = new PlayerSpringState(this);
+            Player = player;
         }
     }
 }

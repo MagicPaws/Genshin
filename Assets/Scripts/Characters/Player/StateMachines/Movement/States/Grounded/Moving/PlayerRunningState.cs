@@ -4,6 +4,8 @@ namespace Genshin.Characters.Player.StateMachines.Movement.States.Grounded.Movin
 {
     public class PlayerRunningState : PlayerMovementState
     {
-        
+        public PlayerRunningState(PlayerMovementStateMachine playerMovementStateMachine) 
+        {
+        }
     }
 }
