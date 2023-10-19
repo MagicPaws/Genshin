@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Genshin.Characters.Player.StateMachines.Movement.States.Grounded.Moving
+﻿namespace Genshin
 {
     public class PlayerWalkingState : PlayerMovementState
     {

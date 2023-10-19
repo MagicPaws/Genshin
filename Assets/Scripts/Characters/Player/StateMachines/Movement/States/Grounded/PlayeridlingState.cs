@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Genshin.Characters.Player.StateMachines.Movement.States.Grounded
+﻿namespace Genshin
 {
     public class PlayeridlingState : PlayerMovementState
     {

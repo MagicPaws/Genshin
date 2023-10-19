@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Genshin.Characters.Player.Utilities.Input
+namespace Genshin
 {
     public class PlayerInput : MonoBehaviour
     {

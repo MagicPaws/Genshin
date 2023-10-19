@@ -1,8 +1,6 @@
-﻿using Genshin.Characters.Player.StateMachines.Movement;
-using UnityEngine;
-using UnityEngine.InputSystem;
+﻿using UnityEngine;
 
-namespace Genshin.Characters.Player
+namespace Genshin
 {
     [RequireComponent(typeof(PlayerInput))]
    public class Player : MonoBehaviour

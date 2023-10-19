@@ -1,7 +1,4 @@
-﻿using Genshin.Characters.Player.StateMachines.Movement.States.Grounded;
-using Genshin.Characters.Player.StateMachines.Movement.States.Grounded.Moving;
-
-namespace Genshin.Characters.Player.StateMachines.Movement
+﻿namespace Genshin
 {
    public class PlayerMovementStateMachine : StateMachine
     {

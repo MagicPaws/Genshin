@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
-using UnityEngine.InputSystem;
-
-namespace Genshin.Characters.Player.StateMachines.Movement.States
+namespace Genshin
 {
     public class PlayerMovementState : IState
     {
@@ -49,7 +47,7 @@ namespace Genshin.Characters.Player.StateMachines.Movement.States
         private void ReadMovementInput()
         {
             // 获取玩家的移动输入
-            // Todo: 无法获取到输入信息
+            // Todo: stateMachine为空
             movementInput = stateMachine.Player.Input.PlayerActions.Movement.ReadValue<Vector2>();
         }
         private void Move()
