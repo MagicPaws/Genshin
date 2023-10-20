@@ -2,8 +2,9 @@
 {
     public class PlayerSpringState : PlayerMovementState
     {
-        public PlayerSpringState(PlayerMovementStateMachine playerMovementStateMachine)
+        public PlayerSpringState(PlayerMovementStateMachine playerMovementStateMachine) : base(playerMovementStateMachine)
         {
+
         }
     }
 }

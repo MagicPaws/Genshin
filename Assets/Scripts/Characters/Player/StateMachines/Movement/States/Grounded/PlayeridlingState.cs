@@ -2,7 +2,7 @@
 {
     public class PlayeridlingState : PlayerMovementState
     {
-        public PlayeridlingState(PlayerMovementStateMachine playerMovementStateMachine) 
+        public PlayeridlingState(PlayerMovementStateMachine playerMovementStateMachine) : base(playerMovementStateMachine)
         {
         }
     }

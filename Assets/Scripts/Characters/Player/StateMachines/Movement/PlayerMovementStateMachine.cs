@@ -1,16 +1,16 @@
 ﻿namespace Genshin
 {
-   public class PlayerMovementStateMachine : StateMachine
+    public class PlayerMovementStateMachine : StateMachine
     {
         // 获取玩家静止状态
-        public PlayeridlingState IdlingState { get; }
+        public PlayeridlingState IdlingState { get; set; }
         // 获取玩家步行状态
-        public PlayerWalkingState WalkingState { get; }
+        public PlayerWalkingState WalkingState { get; set; }
         // 获取玩家奔跑状态
-        public PlayerRunningState RunningState { get; }
+        public PlayerRunningState RunningState { get; set; }
         // 获取玩家弹跳状态
-        public PlayerSpringState SpringState { get; }
-        public Player Player { get;}
+        public PlayerSpringState SpringState { get; set; }
+        public Player Player { get; }
         /// <summary>
         /// 构造函数初始化
         /// </summary>

@@ -13,11 +13,6 @@ namespace Genshin
             stateMachine = playerMovementStateMachine;
         }
 
-        public PlayerMovementState()
-        {
-            
-        }
-
         #region IState Methoods
         public virtual void Enter()
         {
@@ -28,7 +23,7 @@ namespace Genshin
         {
             ReadMovementInput();
         }
-        
+
         public virtual void Exit()
         {
         }
@@ -47,20 +42,19 @@ namespace Genshin
         private void ReadMovementInput()
         {
             // 获取玩家的移动输入
-            // Todo: stateMachine为空
             movementInput = stateMachine.Player.Input.PlayerActions.Movement.ReadValue<Vector2>();
         }
         private void Move()
         {
             if (movementInput == Vector2.zero || speedModifier == 0f) return;
-            
+
             Vector3 movementDirection = GetMovementInputDirection();
-             
+
             float movementSpeed = GetMovementSpeed();
-            
+
             Vector3 currentPlayerHorizontalVelocity = GetPlayerHorizontalVelocity();
-            stateMachine.Player.Rigidbody.AddForce(movementSpeed * movementDirection  - currentPlayerHorizontalVelocity,ForceMode.VelocityChange);
-            
+            stateMachine.Player.Rigidbody.AddForce(movementSpeed * movementDirection - currentPlayerHorizontalVelocity, ForceMode.VelocityChange);
+
         }
 
         private float GetMovementSpeed()
@@ -75,7 +69,7 @@ namespace Genshin
         {
             return new Vector3(movementInput.x, 0f, movementInput.y);
         }
-        
+
         protected Vector3 GetPlayerHorizontalVelocity()
         {
             Vector3 playerHorizontalVelocity = stateMachine.Player.Rigidbody.velocity;
