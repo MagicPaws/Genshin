@@ -1,20 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 namespace Genshin
-{
+{/// <summary>
+ /// 包含了状态的基本方法
+ /// </summary>
     public interface IState
     {
-        // 进入状态
+        /// <summary>
+        /// 进入状态时调用
+        /// </summary>
         public void Enter();
-        // 处理输入
+        
+        /// <summary>
+        /// 处理输入
+        /// </summary>
         public void HandleInput();
-        // 退出状态
+        
+        /// <summary>
+        /// 退出状态时调用
+        /// </summary>
         public void Exit();
-        // 更新状态
+        
+        /// <summary>
+        /// 本状态内每帧调用
+        /// </summary>
         public void Update();
-        // 物理更新
+        
+        
+        /// <summary>
+        /// 本状态内物理帧调用
+        /// </summary>
         public void PhysicsUpdate();
     }
 }
